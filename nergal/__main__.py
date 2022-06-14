@@ -39,7 +39,7 @@ from datetime import date
 @click.command()
 @click.option('-ticker', '--ticker', prompt='The stock ticker', help='Ticker of the stock')
 def single(ticker):
-    path = "/Users/alexiskaldany/repo/click_test/nergal/test.csv"
+    path = "./nergal/test.csv"
     yf.download(ticker, start="2000-01-01", end=date.isoformat(date.today())).to_csv(path)
     click.echo('Saved data to {}'.format(path))
     
